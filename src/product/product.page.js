@@ -12,7 +12,7 @@ import { Header, Button } from './product.style.js'
 export const Product = () => {
   const { id } = useParams()
   const { currency } = useCurrency()
-  const { data: product } = useFetch(`//localhost:5000/${id}`, [])
+  const { data: product } = useFetch(`//localhost:5000/products/${id}`, [])
 
   const toText = (text, index) => <Text key={ index } style={{ color: '#999' }}>{ text }</Text>
 

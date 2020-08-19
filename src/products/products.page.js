@@ -11,7 +11,7 @@ import { FreeShipping } from '../free-shipping/free-shipping.style.js'
 
 export const Products = () => {
   const { query } = useQuery()
-  const { loading, data: products } = useFetch(`//localhost:5000?q=${query.q || ''}`, [])
+  const { loading, data: products } = useFetch(`//localhost:5000/products?q=${query.q || ''}`, [])
   const { currency } = useCurrency()
 
   const toCardItem = item => (
