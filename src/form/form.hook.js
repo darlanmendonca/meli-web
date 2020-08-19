@@ -4,12 +4,20 @@ import { FormContext } from './form.context'
 import { usePrevious } from '../previous/previous.hook'
 import useDeepCompareEffect from 'use-deep-compare-effect'
 
+/**
+  * O hook useForm disponibiliza o contexto do formulário
+  */
 export const useForm = () => {
   const context = useContext(FormContext)
 
   return context
 }
 
+/**
+  * O hook useField provê acesso ao valor e validação de um campo,
+  * de uma forma mais simples/direta do que acessar no contexto do formulário,
+  * porém os dados continuam sendo armazenados diretamente no contexto do formulário.
+  */
 export const useField = (props, initialValue) => {
   const { name } = props
   const { data, setData, form, validating, validities, setValidities } = useForm()
