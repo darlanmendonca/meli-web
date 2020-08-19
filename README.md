@@ -1,4 +1,11 @@
+# meli-web
+
 Aplicação web para busca de produtos no mercado livre
+
+## Requerimentos
+
+- Node
+- NPM
 
 # Instalação e uso
 
