@@ -23,7 +23,7 @@ export const Products = () => {
         <div style={{ flex: 1 }}>
           <Title>
             { currency(item.price) }
-            { item.free_shipping && <FreeShipping /> }
+            { item.free_shipping && <FreeShipping aria-label='Entrega gratis' /> }
           </Title>
           <Text> { item.title }</Text>
           <Text> { item.description }</Text>
